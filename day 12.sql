@@ -1,0 +1,18 @@
+create database primefootballacademy;
+use primefootballacademy;
+create table playerdetails(playernumber int not null primary key, playername varchar(255) not null, playergender varchar(12) not null);
+alter table playerdetails add column playerage int not null;
+show columns from playerdetails;
+alter table playerdetails add column playerposition varchar(12) not null after playergender;
+show columns from playerdetails;
+alter table playerdetails add column playerid int first;
+show columns from playerdetails;
+alter table playerdetails modify column playername text not null;
+show columns from playerdetails;
+alter table playerdetails change playernumber playerfieldnumber int not null;
+show columns from playerdetails;
+alter table playerdetails drop column playerid;
+show columns from playerdetails;
+alter table playerdetails rename to playerrecords;
+show columns from playerrecords;
+show tables;
